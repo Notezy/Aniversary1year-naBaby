@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1st Anniversary ❤️ สุขสันต์วันครบรอบ 1 ปี</title>
+    <!-- เชื่อมต่อไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <!-- Background Music Player -->
+    <button class="music-btn" onclick="toggleMusic()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+        <span id="musicBtnText">เปิดเพลงรัก 🎵</span>
+    </button>
+    <audio id="bgMusic" loop preload="none">
+        <source src="Music/Unilt.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge">❤️️ Happy 1st Anniversary</span>
+        <h1>สุขสันต์วันครบรอบ 1 ปีนะเธอ</h1>
+        <p>“365 วันที่ผ่านมา คือช่วงเวลาที่มีความสุขที่สุดเพราะมีเธออยู่ข้างๆ”</p>
+
+        <!-- Live Love Timer -->
+        <div class="timer-card">
+            <div style="font-weight: 600; color: #4b5563; margin-bottom: 8px;">เรารักกันและเดินทางร่วมกันมาแล้ว ❤️</div>
+            <div class="timer-grid">
+                <div class="timer-box">
+                    <span id="days" class="num">365</span>
+                    <span class="unit">วัน (Days)</span>
+                </div>
+                <div class="timer-box">
+                    <span id="hours" class="num">00</span>
+                    <span class="unit">ชั่วโมง (Hours)</span>
+                </div>
+                <div class="timer-box">
+                    <span id="minutes" class="num">00</span>
+                    <span class="unit">นาที (Minutes)</span>
+                </div>
+                <div class="timer-box">
+                    <span id="seconds" class="num">00</span>
+                    <span class="unit">วินาที (Seconds)</span>
+                </div>
+            </div>
+            <p style="font-size: 0.8rem; color: #f43f5e; margin-top: 12px;">และจะรักเพิ่มขึ้นในทุกๆ วันที่เดินไปด้วยกัน 💕</p>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="container">
+        <div class="section-title">
+            <span>Secret Love Letter</span>
+            <h2>จดหมายรักฉบับครบรอบ 💌</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 4px;">แตะที่ซองจดหมายเพื่อเปิดอ่านความในใจนะจ๊ะ</p>
+        </div>
+
+        <div class="envelope-card" onclick="openModal('letterModal')">
+            <div style="font-size: 3rem; margin-bottom: 8px;">💌</div>
+            <h3 style="color: #be123c; font-size: 1.2rem; margin-bottom: 4px;">คลิกเพื่อเปิดอ่านจดหมายรัก ❤️</h3>
+            <p style="font-size: 0.85rem; color: #e11d48;">ถึง: ภรรยาสุดน่ารักของเค้า</p>
+        </div>
+    </section>
+
+    <!-- Photo Gallery 3x3 Grid -->
+    <section class="container">
+        <div class="section-title">
+            <span>Photo Memories</span>
+            <h2>คลังภาพความทรงจำ 📸</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 4px;">รูปถ่ายบันทึกความทรงจำหวานๆ ของพวกเรา (แตะรูปเพื่อขยายใหญ่)</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="photo-card" onclick="showLightbox('Image/รูปทะเล.jpg',' ทริปแรกของเรา')">
+                <img src="Image/รูปทะเล.jpg" alt="Memory 1" loading="lazy">
+                <p> ทริปแรกของเรา</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/ที่ปราณ.jpg',' ทะเลยามเย็นที่สวยงาม')">
+                <img src="Image/ที่ปราณ.jpg" alt="Memory 2" loading="lazy">
+                <p> ทะเลยามเย็นที่สวยงาม</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/ที่นนท์.jpg')">
+                <img src="Image/ที่นนท์.jpg" alt="Memory 3" loading="lazy">
+                <p> วันสบายๆ ของพวกเรา</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/ทำบุญ.jpg',' ทำบุญด้วยกันครั้งแรก')">
+                <img src="Image/ทำบุญ.jpg" alt="Memory 4" loading="lazy">
+                <p> ทำบุญด้วยกันครั้งแรก</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/น่ารัก.jpg',' ช่วงเวลาน่ารักๆ ของเรา')">
+                <img src="Image/น่ารัก.jpg" alt="Memory 5" loading="lazy">
+                <p> เปลี่ยนที่นอนกัน</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/ที่บ้าน.jpg',' เปิดตัวกับที่บ้านครั้งแรก')">
+                <img src="Image/ที่บ้าน.jpg" alt="Memory 6" loading="lazy">
+                <p> เปิดตัวกับที่บ้านครั้งแรก</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/มุมเผลอๆ.jpg',' มุมเผลอๆของเธอที่น่ารักมากๆ')">
+                <img src="Image/มุมเผลอๆ.jpg" alt="Memory 7" loading="lazy">
+                <p> มุมเผลอๆของเธอที่น่ารักมากๆ</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/รีดผ้า.jpg',' ขอบคุณนะที่คอยดูแลเค้าในหลายๆเรื่อง')">
+                <img src="Image/รีดผ้า.jpg" alt="Memory 8" loading="lazy">
+                <p> ขอบคุณนะที่คอยดูแลเค้าในหลายๆเรื่อง</p>
+            </div>
+            <div class="photo-card" onclick="showLightbox('Image/รูปทะเล.2jpg.jpg',' ก้าวสู่ปีต่อไปด้วยกันนะ')">
+                <img src="Image/รูปทะเล.2jpg.jpg" alt="Memory 9" loading="lazy">
+                <p> ก้าวสู่ปีต่อไปด้วยกันนะ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons I Love You Section -->
+    <section class="container">
+        <div class="section-title">
+            <span>Reasons Why</span>
+            <h2>เหตุผลที่รักเธอ 💖</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 4px;">แตะดูการ์ดแต่ละใบเพื่ออ่านความในใจนะ</p>
+        </div>
+
+        <div class="reasons-grid">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">😊</div>
+                        <h3 style="font-size: 1rem;">รอยยิ้มสดใส</h3>
+                        <span style="font-size: 0.75rem; color: #f43f5e; margin-top: 6px;">แตะเพื่อพลิกอ่าน 👈</span>
+                    </div>
+                    <div class="flip-back">
+                        <p style="font-size: 0.85rem;">"รอยยิ้มของเธอทำให้วันแย่ๆ สดใสขึ้นได้เสมอ มองกี่ครั้งก็ตกหลุมรัก"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🤝</div>
+                        <h3 style="font-size: 1rem;">ความใส่ใจน่ารัก</h3>
+                        <span style="font-size: 0.75rem; color: #f43f5e; margin-top: 6px;">แตะเพื่อพลิกอ่าน 👈</span>
+                    </div>
+                    <div class="flip-back">
+                        <p style="font-size: 0.85rem;">"เธอคอยใส่ใจเรื่องเล็กๆ น้อยๆ ถามไถ่ด้วยความเป็นห่วงเสมอ อบอุ่นมากๆ"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">🛡️</div>
+                        <h3 style="font-size: 1rem;">ความสบายใจ</h3>
+                        <span style="font-size: 0.75rem; color: #f43f5e; margin-top: 6px;">แตะเพื่อพลิกอ่าน 👈</span>
+                    </div>
+                    <div class="flip-back">
+                        <p style="font-size: 0.85rem;">"อยู่กับเธอแล้วสบายใจ เป็นเซฟโซนที่ดีที่สุดในชีวิตของเค้าเลย"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <div style="font-size: 2rem; margin-bottom: 8px;">♾️</div>
+                        <h3 style="font-size: 1rem;">เพราะเป็นเธอ</h3>
+                        <span style="font-size: 0.75rem; color: #f43f5e; margin-top: 6px;">แตะเพื่อพลิกอ่าน 👈</span>
+                    </div>
+                    <div class="flip-back">
+                        <p style="font-size: 0.85rem;">"รักเพราะเธอเป็นเธอแบบนี้แหละ ขอบคุณที่เดินข้างกันตลอด 1 ปีนะและจะเดินข้างกันต่อไปอีกนานๆ"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Surprise Button Section -->
+    <section class="container" style="text-align: center;">
+        <div style="background: rgba(255,255,255,0.9); padding: 32px 20px; border-radius: 24px; border: 1px solid #ffe4e6;">
+            <div style="font-size: 2rem; margin-bottom: 8px;">✨</div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 6px;">ข้อความลับถึงเธอ ✨</h3>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">กดปุ่มหัวใจด้านล่างนี้ เพื่อรับคำอธิษฐานสุดพิเศษนะ!</p>
+            <button class="btn-primary" onclick="openModal('surpriseModal')">
+                ❤️ กดรับความรักตรงนี้เลย ❤️
+            </button>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- 1. Letter Modal -->
+    <div id="letterModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('letterModal')">&times;</button>
+            <div style="text-align: center; margin-bottom: 16px;">
+                <div style="font-size: 2.5rem;">❤️</div>
+                <h3 style="font-size: 1.4rem; color: #111827;">สุขสันต์วันครบรอบ 1 ปีครับ ❤️</h3>
+                <span style="font-size: 0.8rem; color: #f43f5e;">365 Days & Forever</span>
+            </div>
+            <div style="font-size: 0.95rem; color: #374151; line-height: 1.7; border-top: 1px solid #ffe4e6; border-bottom: 1px solid #ffe4e6; padding: 16px 0; margin-bottom: 16px;">
+                <p style="margin-bottom: 10px;">ถึงเธอ... คนที่เป็นความสุขในทุกๆ วันของเค้า</p>
+                <p style="margin-bottom: 10px;">ตลอด 1 ปีที่เราได้เดินทางร่วมกันมา สำหรับเค้าแล้วมันคือ ช่วงเวลาที่มีความสุขมากๆเลย เพราะเธอคือคนที่เข้ามาเปลี่ยนหลายๆอย่างในชีวิตของเค้าให้ดีขึ้น เวลาผ่านไปเร็วมากๆ เค้ายังรู้สึกว่าเหมือนเราเพิ่งเริ่มจีบกันเมื่อวานเอง</p>
+                <p style="margin-bottom: 10px;">ขอบคุณเธอมากๆนะ ที่คอยอยู่เคียงข้างเค้าเสมอ ไม่ว่าจะสุขหรือทุกข์ เธอคือคนที่ทำให้เค้าอยากเป็นคนที่ดีขึ้นในทุกๆวัน และทำให้เค้ารู้สึกสบายใจทุกครั้งที่อยู่กับเธอ</p>
+                <p style="margin-bottom: 10px;">อาจจะมีบ้างครั้งที่เค้าดื้อหรือทำให้เธอไม่พอใจ แต่เค้าก็อยากให้เธอรู้ว่า เค้ารักเธอมากๆ และอยากจะมีเธออยู่ในชีวิตตลอดไป ไม่ว่าจะเจออะไรก็อยากให้เราเดินไปด้วยกันนะ</p>
+                <p>สุขสันต์วันครบรอบ 1 ปีนะคับบ รักเธอที่สุดเลย 💕</p>
+            </div>
+            <div style="text-align: right; font-size: 0.9rem; color: #4b5563;">
+                <p>ด้วยรักสุดหัวใจ,</p>
+                <p style="font-weight: 700; color: #f43f5e;">จากสามีสุดที่รักของเธอ ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Surprise Modal -->
+    <div id="surpriseModal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <button class="modal-close" onclick="closeModal('surpriseModal')">&times;</button>
+            <div style="font-size: 3rem; margin-bottom: 12px;">🎁</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 10px;">ของขวัญหัวใจพิเศษ 🎁</h3>
+            <p style="font-size: 1.05rem; color: #be123c; margin-bottom: 20px;">"ขอบคุณที่เป็นรอยยิ้ม และความอบอุ่นให้กันเสมอนะครับ รักเธอมากๆ รักที่สุดเลย! ❤️"</p>
+            <button class="btn-primary" onclick="closeModal('surpriseModal')">ขอบคุณนะคนน่ารัก 💕</button>
+        </div>
+    </div>
+
+    <!-- 3. Photo Lightbox Modal -->
+    <div id="lightboxModal" class="modal" onclick="closeModal('lightboxModal')">
+        <div style="max-width: 600px; width: 100%; text-align: center;" onclick="event.stopPropagation()">
+            <img id="lightboxImg" src="" alt="Enlarged Memory" style="width: 100%; max-height: 70vh; object-fit: contain; border-radius: 16px; border: 2px solid #fff;">
+            <p id="lightboxCaption" style="color: white; margin-top: 12px; font-size: 1rem;"></p>
+            <button class="btn-primary" style="margin-top: 16px; background: rgba(255,255,255,0.2); color: white;" onclick="closeModal('lightboxModal')">ปิดหน้าต่าง</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ for Our 1st Anniversary</p>
+        <p style="font-size: 0.75rem; margin-top: 4px;">Forever & Always ❤️</p>
+    </footer>
+
+    <!-- เชื่อมต่อไฟล์ JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
